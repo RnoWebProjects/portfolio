@@ -6,15 +6,19 @@ import { Theme } from './utils/Theme';
 import Showcase from './components/Showcase';
 import Skills from './components/Skills';
 import MyProjects from './components/MyProjects';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <ThemeProvider theme={Theme}>
-     <MainBody> 
+     <MainBody>
+      <Navbar/>
       <Container>
         <Showcase /> 
         <Skills/>
         <MyProjects/>
+        <Footer/>
       </Container>
      </MainBody>
     </ThemeProvider>

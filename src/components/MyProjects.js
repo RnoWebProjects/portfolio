@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+
 
 import {
     PaddingContainer,
@@ -7,7 +7,7 @@ import {
     BlueText,
 }from '../Styles/Global.styled';
 
-import  ProjectDetails from '../utils/Data'
+import  {ProjectDetails} from '../utils/Data'
 import Projects from './layout/Projects';
 
 const MyProjects = () => {
@@ -20,8 +20,8 @@ const MyProjects = () => {
                 What <BlueText>I have built</BlueText>
             </Heading>
             { ProjectDetails.map((project)=> (
-                <PaddingContainer>
-                    <Projects/>
+                <PaddingContainer key={project.id} top="5rem" bottom="5rem">
+                    <Projects data={project}/>
 
                 </PaddingContainer>
             ))}
